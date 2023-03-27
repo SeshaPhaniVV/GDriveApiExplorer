@@ -1,0 +1,6 @@
+{
+  "watch": ["src", ".env"],
+  "ext": "js,ts,json",
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "TZ=GMT node -r esm -r module-alias/register --max-old-space-size=2048 --experimental-specifier-resolution=node ./src/app.js"
+}

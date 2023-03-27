@@ -1,0 +1,38 @@
+version: "3"
+services:
+  db:
+    image: "postgres:10-alpine"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: strac_app
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:6.2.5-alpine
+    ports:
+      - "6379:6379"
+
+  app:
+    depends_on:
+      - db
+      - redis
+    build:
+      context: ../
+      dockerfile: ./dockerfiles/app-Dockerfile
+    environment:
+      NODE_ENV: "development"
+      DB_NAME: strac_app
+      DB_USER_NAME: postgres
+      DB_USER_PWD: password
+      DB_HOST_ADDRESS: db
+      DB_HOST_PORT: 5432
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../:/usr/src/app/strac-app
+      - /usr/src/app/strac-app/node_modules

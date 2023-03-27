@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["es2017", "esnext.asynciterable"],
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "module": "commonJS",
+    "pretty": true,
+    "sourceMap": true,
+    "outDir": "./build",
+    "noEmit": false,
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@root": ["./*"],
+      "@src": ["src/*"],
+      "@tests/*": ["tests/*"],
+      "@api/*": ["src/api/*"],
+      "@crons/*": ["src/crons/*"],
+      "@config": ["src/config"],
+      "@config/*": ["src/config/*"],
+      "@loaders/*": ["src/loaders/*"],
+      "@utils/*": ["src/utils/*"],
+      "@docs/*": ["src/docs/*"],
+      "@models/*": ["src/database/models/*"],
+      "@services/*": ["src/services/*"],
+      "@errors/*": ["src/errors/*"]
+    }
+  },
+  "include": ["./src/**/*", "./tests/**/*"],
+  "exclude": ["./node_modules/**/*"]
+}

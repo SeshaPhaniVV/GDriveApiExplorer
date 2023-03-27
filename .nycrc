@@ -1,0 +1,15 @@
+{
+  "reporter": [
+    "lcovonly",
+    "cobertura",
+    "text"
+  ],
+  "check-coverage": true,
+  "include": [
+    "src/**/*.js"
+  ],
+  "require": [
+    "esm"
+  ],
+  "cache": true
+}
