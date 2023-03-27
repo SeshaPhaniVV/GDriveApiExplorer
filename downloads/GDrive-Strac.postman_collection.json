@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "0c9c6ee7-4470-4e80-91bb-1439f1d62477",
+		"name": "GDrive Strac",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8760966"
+	},
+	"item": [
+		{
+			"name": "Gdrive Notifications",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/gdrive/files/notifications",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"gdrive",
+						"files",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GDrive Authenticate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"student_id\": 3,\n    \"title\": \"research3\",\n    \"year\": 2021\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/gdrive/authenticate",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"gdrive",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Files",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/gdrive/files",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"gdrive",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "File Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/gdrive/files/1FBmoaYxmJ4w0lfQ0msSCE4NZBdiiP7fD-KUBlnC0CW0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"gdrive",
+						"files",
+						"1FBmoaYxmJ4w0lfQ0msSCE4NZBdiiP7fD-KUBlnC0CW0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/gdrive/files/download/14DL_1YalFgYhVEuiPCzjDGOgu5kVzkkTg8uQ7gMZxf8",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"gdrive",
+						"files",
+						"download",
+						"14DL_1YalFgYhVEuiPCzjDGOgu5kVzkkTg8uQ7gMZxf8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Watcher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/gdrive/files/watcher/14DL_1YalFgYhVEuiPCzjDGOgu5kVzkkTg8uQ7gMZxf8",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"gdrive",
+						"files",
+						"watcher",
+						"14DL_1YalFgYhVEuiPCzjDGOgu5kVzkkTg8uQ7gMZxf8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
